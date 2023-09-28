@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.nav-menu {
+    background-color: #2ED1B0;
+    display: flex; /* Set the display to flex */
+    justify-content: space-between; /* Align children elements (logo and ul) to the opposite sides */
+    align-items: center; /* Center-align children elements vertically */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.logo {
+    padding: 14px 0; /* Remove horizontal padding and keep vertical padding */
+    width: 200px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align the li elements horizontally */
+}
+
+/* Other styles remain the same */
+
+
+.nav-menu ul li {
+    float: left;
+}
+.nav-menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.nav-menu ul li a:hover {
+    background-color: #272F51;
+}
+.nav-menu ul li a.active {
+    background-color: #1a7970; /* Darker shade of the nav menu background color */
+}
+.container {
+    width: 70%;
+    margin: auto;
+}
+h1, h2, h3 {
+    color: #333;
+}
+p, li {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+}
+.feature-list li {
+    margin-bottom: 0.5em;
+}
+.contact {
+    margin-top: 2em;
+}
+/* week 1*/
+
+.team-members {
+    display: flex;
+    gap: 20px; /* Space between team member boxes */
+}
+
+.team-member {
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+}
