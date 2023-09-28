@@ -42,7 +42,7 @@
 
 - <a href = "https://github.com/muhammadt1">Muhammad Tariq</a>
 
-- <a href = "">Ethan Groski</a>
+- <a href = "https://github.com/EthanGoski">Ethan Goski</a>
 
 <br>
 
