@@ -2,6 +2,8 @@
 
 # Freight-Joint
 
+## Check out the whole process <a href = "https://binaryqubit.github.io/Freight-Joint/githubPages/index.html">:point_right:here:point_left:</a>
+
 </div>
 
 <div><u>
