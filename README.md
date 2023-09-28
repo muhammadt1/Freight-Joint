@@ -57,11 +57,11 @@
 - <a href = "https://code.visualstudio.com/download">Visual Studio Code</a>
 - <a href = "https://code.visualstudio.com/download">Node JS</a> Framework (Ver. 18.16.1 LTS) -> Tested :white_check_mark:
 
-### Run app on your localhost (Front End):
+### Run app on your localhost:
 
 `Change to required directory`
 
-        code/frontend
+        code/public
 
 `Install required React scriptS`
 
@@ -70,19 +70,3 @@
 `Run on your localhost`
 
         npm start
-
-### Run app on your localhost (Back End):
-
-`Change to required directory`
-
-        code/backend
-
-`Install required React scriptS`
-
-        npm install react-scripts --save
-
-`Run on your localhost`
-
-        npm start
-
-Another Test
