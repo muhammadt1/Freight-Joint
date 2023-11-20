@@ -1,14 +1,138 @@
-import { Container, Heading, Text } from "@chakra-ui/layout";
+import { Container, Heading, Text, Flex, Box } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
+
+const PlaceholderBox = ({ width, height, backgroundColor }) => {
+  return (
+    <Box
+      width={width}
+      height={height}
+      backgroundColor={backgroundColor}
+      borderRadius="md"
+      mb="20px"
+    />
+  );
+};
+
+const Footer = () => {
+  return (
+    <Box as="footer" mt="40px" textAlign="center" py="20px">
+      <Text>Freight Joint — Empowering Logistics, Simplifying Success!</Text>
+      <Text>&copy; 2023 Freight Join. All rights reserved.</Text>
+    </Box>
+  );
+};
+
+const Section = ({ title, children }) => {
+  return (
+    <Box py="60px">
+      <Container maxW="container.xl">
+        <Heading as="h2" size="xl" mb="40px" textAlign="center">
+          {title}
+        </Heading>
+        {children}
+      </Container>
+    </Box>
+  );
+};
+
+const FeatureBox = ({ title, description, width }) => {
+  return (
+    <Box
+      p="6"
+      borderWidth="1px"
+      borderRadius="lg"
+      boxShadow="md"
+      mb="20px"
+      width={width}
+    >
+      <Heading size="lg" mb="4">
+        {title}
+      </Heading>
+      <Text>{description}</Text>
+    </Box>
+  );
+};
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Container>
-      <Heading>This is Home</Heading>
-      <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, sunt.</Text>
-      </Container>
+      <Section title="Welcome to Freight Join">
+        <PlaceholderBox width="100%" height="300px" backgroundColor="gray.200" />
+        <Text fontSize="xl" textAlign="center" mb="40px">
+          Welcome to Freight Joint, the innovative loadboard app designed to
+          bridge the gap between shippers and truckers, creating a seamless and
+          efficient logistics experience. With our cutting-edge technology, we
+          bring together shippers with freight to move and truckers with the
+          capacity to move it, ensuring a perfect match every time!
+        </Text>
+      </Section>
+
+      <Section title="Key Features">
+        <Flex justifyContent="space-between" flexWrap="wrap">
+          <FeatureBox
+            title="Real-Time Load Matching"
+            description="Find the perfect freight or truck instantly with our real-time load matching feature."
+            width={{ base: "100%", md: "30%" }}
+          />
+          <FeatureBox
+            title="Transparent Pricing"
+            description="Get instant quotes and competitive pricing, fostering transparency and trust between shippers and truckers."
+            width={{ base: "100%", md: "30%" }}
+          />
+          <FeatureBox
+            title="User-Friendly Interface"
+            description="Navigate easily through our intuitive and user-friendly interface designed to save time and reduce hassle."
+            width={{ base: "100%", md: "30%" }}
+          />
+        </Flex>
+      </Section>
+
+      <Section title="How Freight Joint Works">
+        <Flex justifyContent="space-between" flexWrap="wrap">
+          <Box flexBasis={{ base: "100%", md: "48%" }} mb="20px">
+            <Heading size="lg" mb="4">
+              For Shippers
+            </Heading>
+            <Text>
+              <strong>Post Your Load:</strong> Simply list the details of your
+              freight, including the pickup and delivery locations, dimensions,
+              weight, and any special requirements.
+            </Text>
+            <Text mt="4">
+              <strong>Get Matched:</strong> Our intelligent matching system
+              will connect you with qualified truckers ready to transport your
+              load.
+            </Text>
+          </Box>
+          <Box flexBasis={{ base: "100%", md: "48%" }} mb="20px">
+            <Heading size="lg" mb="4">
+              For Truckers
+            </Heading>
+            <Text>
+              <strong>Find a Load:</strong> Browse through available loads and
+              find the ones that match your route, schedule, and equipment.
+            </Text>
+            <Text mt="4">
+              <strong>Secure a Deal:</strong> Communicate directly with
+              shippers and secure the best deals with transparent pricing.
+            </Text>
+          </Box>
+        </Flex>
+      </Section>
+
+      <Section title="Join the Freight Joint Community!">
+        <PlaceholderBox width="100%" height="300px" backgroundColor="gray.200" />
+        <Text fontSize="xl" textAlign="center" mb="40px">
+          Whether you’re a shipper with freight to move or a trucker with empty
+          space to fill, Freight Joint is your one-stop solution for all your
+          logistics needs. Join our growing community and experience a new era
+          of streamlined shipping and transportation. Let's drive the future of
+          logistics together!
+        </Text>
+      </Section>
+
+      <Footer />
     </>
-  )
+  );
 }

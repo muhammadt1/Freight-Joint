@@ -38,11 +38,11 @@ export default function Login() {
             <VStack spacing="6">
               <Input placeholder="Email or phone number" fontSize= "20px"/>
               <Input placeholder="Password" type="password" fontSize= "20px"/>
-              <Button bg="#0866FF" w="full" color= "white" fontSize= "20px">
+              <Button bg="#0866FF" w="full" color= "white" fontSize= "20px" _hover={{ bg: "#808080" }}>
                 Log In
               </Button>
               <Button variant="link" colorScheme="blue">Forgot Password?</Button>
-              <Button bg="#42B72A" w="80%" color="white" fontSize= "20px">
+              <Button bg="#42B72A" w="80%" color="white" fontSize= "20px" _hover={{ bg: "#808080" }}>
                 Create new account
               </Button>
             </VStack>
