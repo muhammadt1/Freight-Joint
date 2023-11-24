@@ -1,5 +1,15 @@
-import { Container, Heading, Text, Flex, Box } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Text,
+  Flex,
+  Box,
+  Image 
+} from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
+import Truck from "../../public/img/truck.webp"
+import Trailer from "../../public/img/trailer.webp"
+import Footer from "../components/Footer"
 
 const PlaceholderBox = ({ width, height, backgroundColor }) => {
   return (
@@ -13,18 +23,9 @@ const PlaceholderBox = ({ width, height, backgroundColor }) => {
   );
 };
 
-const Footer = () => {
-  return (
-    <Box as="footer" mt="40px" textAlign="center" py="20px">
-      <Text>Freight Joint — Empowering Logistics, Simplifying Success!</Text>
-      <Text>&copy; 2023 Freight Join. All rights reserved.</Text>
-    </Box>
-  );
-};
-
 const Section = ({ title, children }) => {
   return (
-    <Box py="60px">
+    <Box py="40px">
       <Container maxW="container.xl">
         <Heading as="h2" size="xl" mb="40px" textAlign="center">
           {title}
@@ -44,8 +45,9 @@ const FeatureBox = ({ title, description, width }) => {
       boxShadow="md"
       mb="20px"
       width={width}
+      textAlign = "center"
     >
-      <Heading size="lg" mb="4">
+      <Heading size="md" mb="4">
         {title}
       </Heading>
       <Text>{description}</Text>
@@ -57,9 +59,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Section title="Welcome to Freight Join">
-        <PlaceholderBox width="100%" height="300px" backgroundColor="gray.200" />
-        <Text fontSize="xl" textAlign="center" mb="40px">
+      <Image src = {Truck} width="100%"/>
+      <Section title="Welcome to Freight Joint">
+        <Text fontSize="xl" textAlign="center">
           Welcome to Freight Joint, the innovative loadboard app designed to
           bridge the gap between shippers and truckers, creating a seamless and
           efficient logistics experience. With our cutting-edge technology, we
@@ -91,7 +93,7 @@ export default function Home() {
       <Section title="How Freight Joint Works">
         <Flex justifyContent="space-between" flexWrap="wrap">
           <Box flexBasis={{ base: "100%", md: "48%" }} mb="20px">
-            <Heading size="lg" mb="4">
+            <Heading size="md" mb="4" textAlign="center">
               For Shippers
             </Heading>
             <Text>
@@ -106,7 +108,7 @@ export default function Home() {
             </Text>
           </Box>
           <Box flexBasis={{ base: "100%", md: "48%" }} mb="20px">
-            <Heading size="lg" mb="4">
+            <Heading size="md" mb="4" textAlign="center">
               For Truckers
             </Heading>
             <Text>
@@ -122,13 +124,13 @@ export default function Home() {
       </Section>
 
       <Section title="Join the Freight Joint Community!">
-        <PlaceholderBox width="100%" height="300px" backgroundColor="gray.200" />
+        <Image src= {Trailer} mb= "20px" />
         <Text fontSize="xl" textAlign="center" mb="40px">
-          Whether you’re a shipper with freight to move or a trucker with empty
+          <i>Whether you’re a shipper with freight to move or a trucker with empty
           space to fill, Freight Joint is your one-stop solution for all your
           logistics needs. Join our growing community and experience a new era
           of streamlined shipping and transportation. Let's drive the future of
-          logistics together!
+          logistics together!</i>
         </Text>
       </Section>
 

@@ -8,16 +8,25 @@ import {
   Button,
   Text,
   Image,
-  Select,
+  Select
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
+import Pete from "../../public/img/Pete.webp";
+import Terms from "../components/TermsConditions"
 
 export default function Registration() {
   const [registrationType, setRegistrationType] = useState("shippers");
+  const [isTermsOpen, setTermsOpen] = useState(false); // State to manage Terms modal visibility
 
   const handleRegistrationChange = (value) => {
     setRegistrationType(value);
   };
+
+  // Function to open Terms modal
+  const onOpenTerms = () => setTermsOpen(true);
+
+  // Function to close Terms modal
+  const onCloseTerms = () => setTermsOpen(false);
 
   return (
     <>
@@ -32,12 +41,13 @@ export default function Registration() {
         >
           <Box p="4" mr="50px">
             <Image
-              width="300px"
+              width="1000px"
               objectFit="cover"
-              src="img/logo.svg" // Replace with your logo image URL
-              alt="Logo"
+              src={Pete} 
+              alt="Pete"
+              boxShadow="1px 1px 10px #000"
             />
-            <Text mb="4" fontSize="20px">
+            <Text mb="4" mt="20px">
               Connecting Shippers and Truckers Seamlessly
             </Text>
           </Box>
@@ -47,7 +57,6 @@ export default function Registration() {
               <Select
                 value={registrationType}
                 onChange={(e) => handleRegistrationChange(e.target.value)}
-                fontSize="20px"
                 w="100%"
               >
                 <option value="shippers">Register for Shippers</option>
@@ -56,22 +65,22 @@ export default function Registration() {
 
               {registrationType === "shippers" ? (
                 <VStack spacing="6" w="100%">
-                  <Input placeholder="Company Name" fontSize="20px" />
-                  <Input placeholder="Primary Contact Name" fontSize="20px" />
-                  <Input placeholder="Primary Contact Email" type="email" fontSize="20px" />
-                  <Input placeholder="Primary Phone Number" type="tel" fontSize="20px" />
-                  <Input placeholder="Password" type="password" fontSize="20px" />
-                  <Input placeholder="Confirm Password" type="password" fontSize="20px" />
+                  <Input placeholder="Company Name" required />
+                  <Input placeholder="Primary Contact Name" required/>
+                  <Input placeholder="Primary Contact Email" type="email" required/>
+                  <Input placeholder="Primary Phone Number" type="tel" required />
+                  <Input placeholder="Password" type="password" required/>
+                  <Input placeholder="Confirm Password" type="password" required/>
                 </VStack>
               ) : (
                 <VStack spacing="6" w="100%">
-                  <Input placeholder="Legal Company Name" fontSize="20px" />
-                  <Input placeholder="Doing Business As" fontSize="20px" />
-                  <Input placeholder="Company Address" fontSize="20px" />
-                  <Input placeholder="Email" type="email" fontSize="20px" />
-                  <Input placeholder="Phone Number" type="tel" fontSize="20px" />
-                  <Input placeholder="DOT #" fontSize="20px" />
-                  <Input placeholder="MCV #" fontSize="20px" />
+                  <Input placeholder="Legal Company Name" required/>
+                  <Input placeholder="Doing Business As" required/>
+                  <Input placeholder="Company Address" required/>
+                  <Input placeholder="Email" type="email" required/>
+                  <Input placeholder="Phone Number" type="tel" required/>
+                  <Input placeholder="DOT #" required/>
+                  <Input placeholder="MCV #" required/>
                 </VStack>
               )}
 
@@ -79,21 +88,30 @@ export default function Registration() {
                 bg="#0866FF"
                 w="100%"
                 color="white"
-                fontSize="20px"
-                _hover={{ bg: "#808080" }}
+                _hover={{ bg: "#42B72A" }}
               >
                 Register
               </Button>
               <Text fontSize="sm" textAlign="center">
-                By registering, you agree to our Terms of Service and Privacy Policy.
+                By registering, you agree to our 
+                <Button ml="2" mr="1" variant="link" color="#0866FF" fontSize="14px" onClick={onOpenTerms}>
+                  Terms of Service
+                </Button>
+                and 
+                <Button ml="1" mr="2" variant="link" color="#0866FF" fontSize="14px">
+                  Privacy Policy
+                </Button>
               </Text>
             </VStack>
-            <Text fontWeight="500" textAlign="center" mt="2">
-              Your Ultimate Loadboard Solution!
+            <Text textAlign="center" mt="2">
+              <strong>Your Ultimate Loadboard Solution!</strong>
             </Text>
           </Box>
         </Flex>
       </Container>
+
+      <Terms isTermsOpen={isTermsOpen} onCloseTerms={onCloseTerms} />
     </>
   );
 }
+

@@ -2,16 +2,20 @@ import {
   Container,
   Flex,
   Box,
-  VStack,
   Input,
   Button,
   Text,
   Image,
   Card,
+  FormControl,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 
 export default function Login() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <Navbar />
@@ -20,6 +24,7 @@ export default function Login() {
           direction={{ base: "column", md: "row" }}
           justify="center"
           align="center"
+          textAlign={"center"}
           minH="80vh"
           pt={{ base: "4", md: "0" }}
         >
@@ -29,27 +34,35 @@ export default function Login() {
               objectFit="cover"
               src="img/logo.svg"
               alt="Logo"
-              
             />
-            <Text mb="4" fontSize= "20px">Connecting Shippers and Truckers Seamlessly</Text>
+            <Text mb="4">Connecting Shippers and Truckers Seamlessly</Text>
           </Box>
-
-          <Card p="60px" ml= "50px" fontSize="15px" w="500px">
-            <VStack spacing="6">
-              <Input placeholder="Email or phone number" fontSize= "20px"/>
-              <Input placeholder="Password" type="password" fontSize= "20px"/>
-              <Button bg="#0866FF" w="full" color= "white" fontSize= "20px" _hover={{ bg: "#808080" }}>
+          <Card p="60px" ml= "50px" fontSize="15px" w="500px"> 
+            <form onSubmit={handleSubmit}>
+              <FormControl mt="8" id="name" isRequired>
+                <Input type="text" placeholder="Email or Phone number"/>
+              </FormControl>
+              <FormControl mt="6" id="email" isRequired>
+                <Input type="password" placeholder="Password" />
+              </FormControl>
+              <Button mt="4" bg="#0866FF" w="full" color="white" _hover={{ bg: "#42B72A" }}>
                 Log In
               </Button>
-              <Button variant="link" colorScheme="blue">Forgot Password?</Button>
-              <Button bg="#42B72A" w="80%" color="white" fontSize= "20px" _hover={{ bg: "#808080" }}>
+            </form>
+            <form onSubmit={handleSubmit} textAlign="center">
+              <Button mt="4" variant="link" color="#0866FF" fontSize="14px">
+                Forgot Password?
+              </Button>
+            </form>
+            <form onSubmit={handleSubmit}>
+              <Button mt="4" bg="#42B72A" w="80%" color="white" _hover={{ bg: "#42A72A" }}>
                 Create new account
               </Button>
-            </VStack>
-            <Text fontWeight= "500" textAlign="center" mt= "2">Your Ultimate Loadboard Solution!</Text>
+            </form>
           </Card>
         </Flex>
       </Container>
+      <Footer/>
     </>
   );
 }
