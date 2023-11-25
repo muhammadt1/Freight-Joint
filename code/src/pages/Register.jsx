@@ -13,21 +13,22 @@ import {
 import Navbar from "../components/Navbar";
 import Pete from "../../public/img/Pete.webp";
 import Terms from "../components/TermsConditions"
+import Privacy from "../components/PrivacyPolicy"
+import Footer from "../components/Footer"
 
 export default function Registration() {
   const [registrationType, setRegistrationType] = useState("shippers");
-  const [isTermsOpen, setTermsOpen] = useState(false); // State to manage Terms modal visibility
+  const [isTermsOpen, setTermsOpen] = useState(false);
+  const [isPrivacyOpen, setPrivacyOpen] = useState(false);
 
   const handleRegistrationChange = (value) => {
     setRegistrationType(value);
   };
-
-  // Function to open Terms modal
   const onOpenTerms = () => setTermsOpen(true);
-
-  // Function to close Terms modal
   const onCloseTerms = () => setTermsOpen(false);
 
+  const onOpenPrivacy = () => setPrivacyOpen(true);
+  const onClosePrivacy = () => setPrivacyOpen(false);
   return (
     <>
       <Navbar />
@@ -98,7 +99,7 @@ export default function Registration() {
                   Terms of Service
                 </Button>
                 and 
-                <Button ml="1" mr="2" variant="link" color="#0866FF" fontSize="14px">
+                <Button ml="1" mr="2" variant="link" color="#0866FF" fontSize="14px" onClick={onOpenPrivacy}>
                   Privacy Policy
                 </Button>
               </Text>
@@ -111,6 +112,8 @@ export default function Registration() {
       </Container>
 
       <Terms isTermsOpen={isTermsOpen} onCloseTerms={onCloseTerms} />
+      <Privacy isPrivacyOpen={isPrivacyOpen} onClosePrivacy={onClosePrivacy} />
+      <Footer/>
     </>
   );
 }

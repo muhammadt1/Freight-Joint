@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Flex, Spacer } from "@chakra-ui/react";
 import { NavLink, useLocation } from "react-router-dom";
-import Logo from './logo.jsx';
+import Logo from '../components/Logo';
 
 export default function Navbar() {
     const location = useLocation();
@@ -14,14 +14,12 @@ export default function Navbar() {
         fontSize: "17px",
         p: "15px",
         bg: location.pathname === path ? "#0866FF" : "transparent",
-        color: location.pathname === path ? "white" : "#black",
+        color: location.pathname === path ? "white" : "black",
         _hover: {
             bg: "#0866FF",
-            fontSize: "17.5px",
             color: "white"
         }
     });
-
     return (
         <Flex
             bg="gray.200"
