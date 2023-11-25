@@ -12,6 +12,7 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import ResetPassword from './pages/ResetPassword'
 
 // router and routes
 const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path = "resetpassword" element={<ResetPassword />} />
     </Route>
   )
 )
