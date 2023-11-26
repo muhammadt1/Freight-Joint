@@ -13,7 +13,10 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import ResetPassword from './pages/ResetPassword'
-import Dashboard from './pages/Dashboard'
+import ActiveLoads from './pages/ActiveLoads'
+import PostLoad from './pages/PostLoad'
+import MarketPlace from './pages/MarketPlace'
+import MyLoads from './pages/MyLoads'
 
 // router and routes
 const router = createBrowserRouter(
@@ -25,7 +28,10 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path = "resetpassword" element={<ResetPassword />} />
-      <Route path = "dashboard" element={<Dashboard />} />
+      <Route path = "activeloads" element={<ActiveLoads />} />
+      <Route path = "postload" element={<PostLoad />} />
+      <Route path = "marketplace" element={<MarketPlace />} />
+      <Route path = "myloads" element={<MyLoads />} />
     </Route>
   )
 )
