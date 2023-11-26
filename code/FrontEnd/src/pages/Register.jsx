@@ -17,6 +17,7 @@ export default function Registration() {
   const [isPrivacyOpen, setPrivacyOpen] = useState(false);
 
   const [formData, setFormData] = useState({
+    type: "shippers",
     companyName: "",
     contactName: "",
     email: "",
@@ -27,6 +28,7 @@ export default function Registration() {
 
   const handleRegistrationChange = (value) => {
     setRegistrationType(value);
+    setFormData({ ...formData, type: value });  
   };
 
   const handleChange = (e) => {
@@ -36,14 +38,16 @@ export default function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
-      const response = await axios.post("http://localhost:3001/register", formData);
-      console.log("Registration Successful:", response.data);
-      navigate('/login');
+        // Send the registrationType as part of the formData
+        const registrationData = { ...formData, type: registrationType };
+        const response = await axios.post("http://localhost:3001/register", registrationData);
+        console.log("Registration Successful:", response.data);
+        navigate('/login');
     } catch (error) {
-      console.error("Error submitting form", error.response ? error.response.data : error);
+        console.error("Error submitting form", error.response ? error.response.data : error);
     }
-  };
+};
+
 
   const onOpenTerms = () => setTermsOpen(true);
   const onCloseTerms = () => setTermsOpen(false);
@@ -98,6 +102,12 @@ export default function Registration() {
                   </VStack>
                 ) : (
                   <VStack spacing="6" w="100%">
+                    <Input name="companyName" placeholder="Company Name" required onChange={handleChange} />
+                    <Input name="contactName" placeholder="Primary Contact Name" required onChange={handleChange} />
+                    <Input name="email" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
+                    <Input name="phoneNumber" placeholder="Primary Phone Number" type="tel" required onChange={handleChange} />
+                    <Input name="password" placeholder="Password" type="password" required onChange={handleChange} />
+                    <Input name="confirmPassword" placeholder="Confirm Password" type="password" required onChange={handleChange} />
                   </VStack>
                 )}
 
@@ -135,4 +145,3 @@ export default function Registration() {
     </>
   );
 }
-
