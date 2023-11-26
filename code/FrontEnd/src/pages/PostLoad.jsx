@@ -7,11 +7,6 @@ import {
   HStack,
   VStack,
   SimpleGrid,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
   Radio,
   RadioGroup,
   Button,
@@ -31,15 +26,18 @@ export default function PostLoad() {
     dropOffDate: "",
     dropOffTime: "",
     dropOffLocation: "",
-    loadSize: 47,
-    additionalInfo: "",
-    additionalDocuments: null,
   });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
+  const handleInputChange = (event, name = null) => {
+    let value;
+    if (name) {
+      value = event;
+    } else {
+      ({ name, value } = event.target);
+    }
     setFormData({ ...formData, [name]: value });
   };
+  
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
@@ -47,25 +45,32 @@ export default function PostLoad() {
     setFormData({ ...formData, additionalDocuments: selectedFile });
   };
 
-  const handleSubmit = async (event) => {
+const handleSubmit = async (event) => {
     event.preventDefault();
-    const formPayload = new FormData();
-    for (const key in formData) {
-      formPayload.append(key, formData[key]);
-    }
 
     try {
-      const response = await axios.post("http://localhost:3001/postload", formPayload, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      console.log("Form submitted successfully", response.data);
-    } catch (error) {
-      console.error("Error submitting form", error);
-    }
-  };
+        const result = await axios.post("http://localhost:3001/postload", {
+            selectedUnit: formData.selectedUnit,
+            selectedType: formData.selectedType,
+            pickUpLocation: formData.pickUpLocation,
+            pickUpDate: formData.pickUpDate,
+            pickUpTime: formData.pickUpTime,
+            dropOffDate: formData.dropOffDate,
+            dropOffTime: formData.dropOffTime,
+            dropOffLocation: formData.dropOffLocation,
+        });
 
+        console.log(result);
+
+        if (result.data === "Already registered") {
+            alert("Load is already posted");
+        } else {
+            alert("Posted Successfully");
+        }
+    } catch (err) {
+        console.error(err);
+    }
+};
   return (
     <>
       <Flex>
@@ -89,6 +94,7 @@ export default function PostLoad() {
                     <Text fontWeight={"500"}>Pick Up Location</Text>
                     <Input
                       type="text"
+                      name="pickUpLocation"
                       value={formData.pickUpLocation}
                       onChange={handleInputChange}
                     />
@@ -102,6 +108,7 @@ export default function PostLoad() {
                           placeholder="Select Date and Time"
                           size="md"
                           type="date"
+                          name="pickUpDate"
                           value={formData.pickUpDate}
                           onChange={handleInputChange}
                         />
@@ -113,6 +120,7 @@ export default function PostLoad() {
                           placeholder="Select Date and Time"
                           size="md"
                           type="time"
+                          name="pickUpTime"
                           value={formData.pickUpTime}
                           onChange={handleInputChange}
                         />
@@ -123,6 +131,7 @@ export default function PostLoad() {
                           placeholder="Select Date and Time"
                           size="md"
                           type="date"
+                          name="dropOffDate"
                           value={formData.dropOffDate}
                           onChange={handleInputChange}
                         />
@@ -134,6 +143,7 @@ export default function PostLoad() {
                           placeholder="Select Date and Time"
                           size="md"
                           type="time"
+                          name="dropOffTime"
                           value={formData.dropOffTime}
                           onChange={handleInputChange}
                         />
@@ -145,6 +155,7 @@ export default function PostLoad() {
                     <Text fontWeight={"500"}>Drop Off Location</Text>
                     <Input
                       type="text"
+                      name="dropOffLocation"
                       value={formData.dropOffLocation}
                       onChange={handleInputChange}
                     />
@@ -155,7 +166,7 @@ export default function PostLoad() {
                     <RadioGroup
                       name="selectedUnit"
                       value={formData.selectedUnit}
-                      onChange={handleInputChange}
+                      onChange={(value) => handleInputChange(value, 'selectedUnit')}
                     >
                       <SimpleGrid columns={4} spacing={4}>
                         <Radio colorScheme="blue" value="Dry Van">
@@ -224,7 +235,7 @@ export default function PostLoad() {
                     <RadioGroup
                       name="selectedType"
                       value={formData.selectedType}
-                      onChange={handleInputChange}
+                      onChange={(value) => handleInputChange(value, "selectedType")}
                     >
                       <SimpleGrid columns={4} spacing={0}>
                         <Radio colorScheme="blue" value="LTL">
@@ -238,61 +249,13 @@ export default function PostLoad() {
                   </Stack>
 
                   <Stack>
-                    <SimpleGrid columns={4} spacing={0}>
-                      <Text fontWeight={"500"}>Size of Load</Text>
-
-                      <NumberInput
-                        size="lg"
-                        maxW={32}
-                        min={10}
-                        value={formData.loadSize}
-                        onChange={handleInputChange}
-                      >
-                        <NumberInputField />
-                        <NumberInputStepper>
-                          <NumberIncrementStepper />
-                          <NumberDecrementStepper />
-                        </NumberInputStepper>
-                      </NumberInput>
-                    </SimpleGrid>
-                  </Stack>
-
-                  <Stack>
                     <Text fontWeight={"500"}>Additional Information</Text>
                     <Textarea
                       type="text"
+                      name="additionalInfo"
                       value={formData.additionalInfo}
                       onChange={handleInputChange}
                     />
-                  </Stack>
-
-                  <Stack>
-                    <Text fontWeight={"500"}>Additional Documents</Text>
-                    <SimpleGrid columns={2} spacing={4}>
-                      <Input
-                        type="file"
-                        onChange={handleFileChange}
-                        accept=".jpg, .jpeg, .pdf, .png, .gif"
-                        mb={4}
-                        sx={{
-                          "&::file-selector-button": {
-                            bg: "#0866FF",
-                            color: "white",
-                            px: 4,
-                            py: 1,
-                            borderRadius: "md",
-                          },
-                        }}
-                      />
-                      <Button
-                        bg="#0866FF"
-                        color={"white"}
-                        size="md"
-                        _hover={{ bg: "#42B72A" }}
-                      >
-                        Upload File
-                      </Button>
-                    </SimpleGrid>
                   </Stack>
                   <HStack mt={4}></HStack>
                 </Stack>
