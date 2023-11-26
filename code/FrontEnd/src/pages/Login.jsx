@@ -1,25 +1,36 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 import {
-  Container,
-  Flex,
-  Box,
-  Input,
-  Button,
-  Text,
-  Image,
-  Card,
-  FormControl,
+  Container, Flex, Box, Input, Button, Text, Image, Card, FormControl
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
 
 export default function Login() {
-  const handleSubmit = (e) => {
+  const [loginData, setLoginData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleInputChange = (e) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:3001/login", loginData);
+      console.log('Login successful:', response.data);
+      const userType = response.data.userType;
+      navigate(userType === 'shipper' ? '/activeloads' : '/myloads');
+    } catch (error) {
+      console.error('Login failed:', error.response ? error.response.data : error);
+    }
   };
-  const handleForgotPassword = () => {
-    push('/resetpassword');
-  };
+  
+
+  const navigate = useNavigate();
   
   return (
     <>
@@ -46,12 +57,24 @@ export default function Login() {
             <Card p="60px" ml= "50px" fontSize="15px" w="500px"> 
               <form onSubmit={handleSubmit}>
                 <FormControl mt="8" id="name" isRequired>
-                  <Input type="text" placeholder="Email or Phone number"/>
+                <Input 
+                    type="text" 
+                    name="username" 
+                    placeholder="Email or Phone number"
+                    onChange={handleInputChange}
+                    value={loginData.username}
+                  />
                 </FormControl>
                 <FormControl mt="6" id="email" isRequired>
-                  <Input type="password" placeholder="Password" />
+                <Input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Password" 
+                    onChange={handleInputChange}
+                    value={loginData.password}
+                  />
                 </FormControl>
-                <Button mt="4" bg="#0866FF" w="full" color="white" _hover={{ bg: "#42B72A" }}>
+                <Button type='submit' mt="4" bg="#0866FF" w="full" color="white" _hover={{ bg: "#42B72A" }}>
                   Log In
                 </Button>
               </form>
@@ -60,11 +83,11 @@ export default function Login() {
                   Forgot Password?
                 </Button>
               </Link>
-              <form onSubmit={handleSubmit}>
+              <Link to="/register">
                 <Button mt="4" bg="#42B72A" w="80%" color="white" _hover={{ bg: "#42A72A" }}>
                   Create new account
                 </Button>
-              </form>
+              </Link>
             </Card>
               <Text textAlign="center" mt="2">
                 <strong>Your Ultimate Loadboard Solution!</strong>

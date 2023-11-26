@@ -38,7 +38,6 @@ export default function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        // Send the registrationType as part of the formData
         const registrationData = { ...formData, type: registrationType };
         const response = await axios.post("http://localhost:3001/register", registrationData);
         console.log("Registration Successful:", response.data);

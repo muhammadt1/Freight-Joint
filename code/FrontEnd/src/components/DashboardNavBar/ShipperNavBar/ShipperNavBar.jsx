@@ -26,13 +26,16 @@ export default function ShipperSideBar({activePage}) {
   return (
     <Flex
         paddingTop={10}
-      pos="sticky"
-      h="100vh"
-      boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
-      w={navSize === "small" ? "75px" : "200px"}
-      flexDir="column"
-      justifyContent="flex-start"
-      background={isDark ? "#343541" : "#E4E9F7"}
+        pos="fixed"
+        top="0"
+        zIndex="10"
+        pt={10}
+        h="100vh"
+        boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
+        w={navSize === "small" ? "75px" : "200px"}
+        flexDir="column"
+        justifyContent="flex-start"
+        background={isDark ? "#343541" : "#E4E9F7"}
     >
       <Flex
         align="center"
