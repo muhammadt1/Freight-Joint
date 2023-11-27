@@ -11,6 +11,8 @@ import Privacy from "../components/PrivacyPolicy";
 import Footer from "../components/Footer";
 
 export default function Registration() {
+  const [formError, setFormError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
   const [registrationType, setRegistrationType] = useState("shippers");
   const [isTermsOpen, setTermsOpen] = useState(false);
@@ -37,6 +39,19 @@ export default function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formData.companyName || !formData.contactName || !formData.email || !formData.phoneNumber || !formData.password || !formData.confirmPassword) {
+        setFormError('Please fill in all fields');
+        return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+        setPasswordError('Passwords do not match');
+        return;
+    }
+    setPasswordError("");
+    setFormError("");
+
     try {
         const registrationData = { ...formData, type: registrationType };
         const response = await axios.post("http://localhost:3001/register", registrationData);
@@ -46,7 +61,6 @@ export default function Registration() {
         console.error("Error submitting form", error.response ? error.response.data : error);
     }
 };
-
 
   const onOpenTerms = () => setTermsOpen(true);
   const onCloseTerms = () => setTermsOpen(false);
@@ -93,20 +107,34 @@ export default function Registration() {
                 {registrationType === "shippers" ? (
                   <VStack spacing="6" w="100%">
                     <Input name="companyName" placeholder="Company Name" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="contactName" placeholder="Primary Contact Name" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="email" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="phoneNumber" placeholder="Primary Phone Number" type="tel" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="password" placeholder="Password" type="password" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="confirmPassword" placeholder="Confirm Password" type="password" required onChange={handleChange} />
+                    {passwordError && <Text color="red">{passwordError}</Text>}
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                   </VStack>
                 ) : (
                   <VStack spacing="6" w="100%">
                     <Input name="companyName" placeholder="Company Name" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="contactName" placeholder="Primary Contact Name" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="email" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="phoneNumber" placeholder="Primary Phone Number" type="tel" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="password" placeholder="Password" type="password" required onChange={handleChange} />
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="confirmPassword" placeholder="Confirm Password" type="password" required onChange={handleChange} />
+                    {passwordError && <Text color="red">{passwordError}</Text>}
+                    {formError && <Text color="red" textAlign="center">{formError}</Text>}
                   </VStack>
                 )}
 

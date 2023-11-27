@@ -26,25 +26,34 @@ app.get("/activeloads", async (req, res) => {
 
 
 app.post('/register', async (req, res) => {
-    try {
-      const { type, ...userData } = req.body;
+  try {
+      const { type, email, ...userData } = req.body;
+      const existingShipper = await Shipper.findOne({ email });
+      if (existingShipper) {
+        return res.status(400).send('Email already registered as Shipper');
+      }
+      const existingCarrier = await Carrier.findOne({ email });
+      if (existingCarrier) {
+          return res.status(400).send('Email already registered as Carrier');
+      }
 
       if (type === 'shippers') {
-        const newShipper = new Shipper(userData);
-        await newShipper.save();
-        res.status(201).send('Shipper registered successfully');
+          const newShipper = new Shipper({ email, ...userData });
+          await newShipper.save();
+          res.status(201).send('Shipper registered successfully');
       } else if (type === 'truckers') {
-        const newCarrier = new Carrier(userData);
-        await newCarrier.save();
-        res.status(201).send('Trucker registered successfully');
+          const newCarrier = new Carrier({ email, ...userData });
+          await newCarrier.save();
+          res.status(201).send('Trucker registered successfully');
       } else {
-        res.status(400).send('Invalid registration type');
+          res.status(400).send('Invalid registration type');
       }
-    } catch (error) {
+  } catch (error) {
       console.error("Registration Error:", error);
       res.status(500).send('Error in registration: ' + error.message);
-    }
+  }
 });
+
 
 app.post('/login', async (req, res) => {
   try {
