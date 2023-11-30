@@ -22,7 +22,7 @@ export default function Registration() {
     type: "shippers",
     companyName: "",
     contactName: "",
-    email: "",
+    username: "",
     phoneNumber: "",
     password: "",
     confirmPassword: "",
@@ -40,7 +40,7 @@ export default function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.companyName || !formData.contactName || !formData.email || !formData.phoneNumber || !formData.password || !formData.confirmPassword) {
+    if (!formData.companyName || !formData.contactName || !formData.username || !formData.phoneNumber || !formData.password || !formData.confirmPassword) {
         setFormError('Please fill in all fields');
         return;
     }
@@ -110,7 +110,7 @@ export default function Registration() {
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="contactName" placeholder="Primary Contact Name" required onChange={handleChange} />
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
-                    <Input name="email" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
+                    <Input name="username" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="phoneNumber" placeholder="Primary Phone Number" type="tel" required onChange={handleChange} />
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
@@ -126,7 +126,7 @@ export default function Registration() {
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="contactName" placeholder="Primary Contact Name" required onChange={handleChange} />
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
-                    <Input name="email" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
+                    <Input name="username" placeholder="Primary Contact Email" type="email" required onChange={handleChange} />
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}
                     <Input name="phoneNumber" placeholder="Primary Phone Number" type="tel" required onChange={handleChange} />
                     {formError && <Text color="red" textAlign="center">{formError}</Text>}

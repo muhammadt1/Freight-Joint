@@ -5,7 +5,7 @@ import {
   Container, Flex, Box, Input, Button, Text, Image, Card, FormControl
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 
 export default function Login() {
   const [loginData, setLoginData] = useState({
@@ -20,7 +20,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/login", loginData);
+      const response = await axios.post("http://localhost:3001/login", loginData, { withCredentials: true });
       console.log('Login successful:', response.data);
       const userType = response.data.userType;
       navigate(userType === 'shipper' ? '/activeloads' : '/myloads');
@@ -28,7 +28,6 @@ export default function Login() {
       console.error('Login failed:', error.response ? error.response.data : error);
     }
   };
-  
 
   const navigate = useNavigate();
   
@@ -56,17 +55,17 @@ export default function Login() {
           <Box>
             <Card p="60px" ml= "50px" fontSize="15px" w="500px"> 
               <form onSubmit={handleSubmit}>
-                <FormControl mt="8" id="name" isRequired>
-                <Input 
+                <FormControl mt="8" id="username" isRequired>
+                  <Input 
                     type="text" 
-                    name="username" 
-                    placeholder="Email or Phone number"
+                    name="username"
+                    placeholder="Email"
                     onChange={handleInputChange}
-                    value={loginData.username}
+                    value={loginData.username} 
                   />
                 </FormControl>
-                <FormControl mt="6" id="email" isRequired>
-                <Input 
+                <FormControl mt="6" id="password" isRequired>
+                  <Input 
                     type="password" 
                     name="password" 
                     placeholder="Password" 

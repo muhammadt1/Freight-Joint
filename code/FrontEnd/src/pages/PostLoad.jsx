@@ -15,8 +15,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function PostLoad() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     selectedUnit: "Dry Van",
     selectedType: "LTL",
@@ -26,6 +28,7 @@ export default function PostLoad() {
     dropOffDate: "",
     dropOffTime: "",
     dropOffLocation: "",
+    additionalInfo: "",
   });
 
   const handleInputChange = (event, name = null) => {
@@ -37,15 +40,8 @@ export default function PostLoad() {
     }
     setFormData({ ...formData, [name]: value });
   };
-  
 
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    console.log("Selected file:", selectedFile);
-    setFormData({ ...formData, additionalDocuments: selectedFile });
-  };
-
-const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
@@ -58,19 +54,15 @@ const handleSubmit = async (event) => {
             dropOffDate: formData.dropOffDate,
             dropOffTime: formData.dropOffTime,
             dropOffLocation: formData.dropOffLocation,
-        });
-
+            additionalInfo: formData.additionalInfo
+        }, { withCredentials: true });
         console.log(result);
-
-        if (result.data === "Already registered") {
-            alert("Load is already posted");
-        } else {
-            alert("Posted Successfully");
-        }
+        navigate('/activeloads');
     } catch (err) {
-        console.error(err);
+        console.error("Error posting load:", err.response ? err.response.data : err);
     }
 };
+
   return (
     <>
       <Flex>

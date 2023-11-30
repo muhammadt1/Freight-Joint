@@ -3,14 +3,14 @@ const carrierSchema = new mongoose.Schema({
   companyName: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
   contactName: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
-  email: {
+  username: {
     type: String,
     required: true,
     unique: true,
@@ -18,10 +18,17 @@ const carrierSchema = new mongoose.Schema({
   phoneNumber: {
     type: String,
     required: true,
+    unique: false,
+  },
+  password: {
+    type: String,
+    required: true,
+    unique: false,
   },
   confirmPassword: {
     type: String,
     required: true,
+    unique: false,
   },
 });
 const Carrier = mongoose.model('Carrier', carrierSchema);
