@@ -121,14 +121,14 @@ In the freight and logistics industry, shippers are entities that need to send g
 
         | Team Member | Previous Task | Completion State  | Next Task|
         |----------|----------|----------|----------|
-        | Ethan. G    | Front-End Development  |100%  | Front-End Development |
-        | Amandip. P    |Back-End Development  | 98%      | Back-End Development |
-        | Muhammad. T|Front-End Development & Kanban Initialization   | 100% |Front-End Development & Kanban Initialization |
+        | Ethan. G    | Front-End Development  |100%  | Finalize Documentation |
+        | Amandip. P  |Back-End Development  | 98%      | Finalize Documentation |
+        | Muhammad. T|Front-End Development & Kanban Initialization   | 100% |Finalize Documentation|
 
-
-
-
-
+## 5) Project Management
+![Project Management Image](Documents/g1.png)
+![Project Management Image2](Documents/g2.png)
+* ![Gantt PDF](Documents/Week1/Online Gantt 20231127.pdf)
 
 
 
