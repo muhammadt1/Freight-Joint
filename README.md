@@ -47,9 +47,78 @@ In the freight and logistics industry, shippers are entities that need to send g
 
         | Team Member | Previous Task | Completion State  | Next Task|
         |----------|----------|----------|----------|
-        | Ethan. G    | Data     | Data     | Data     |
-        | Amandip. P    | Data     | Data     | Data     |
-        | Row 3    | Data     | Data     | Data     |
+        | Ethan. G    | N/A     | N/A     | Collaborate with one other.    |
+        | Amandip. P    | N/A     | N/A     | Collaborate with one other.    |
+        | Muhammad. T| N/A     | N/A     | Collaborate with one other.     |
+
+* [Meeting 2:](https://binaryqubit.github.io/Freight-Joint/githubPages/week2.html)
+    * **Time:** 09-15-2023
+    * **Agenda**: Brainstorming
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | Ice Breaker    | 100%   | Cost Benefit Analysis  |
+        | Amandip. P    |Ice Breaker     | 100%      | Document lookout |
+        | Muhammad. T| Ice Breaker    | 100%      | Business Case |
+
+
+* [Meeting 3:](https://binaryqubit.github.io/Freight-Joint/githubPages/week3.html)
+    * **Time:** 09-22-2023
+    * **Agenda**: Prototyping Meeting
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | Cost Benefit Analysis   | 100%   | Low-Fidelity Prototyping  |
+        | Amandip. P    |Document lookout    | 100%      | Low-Fidelity Prototyping |
+        | Muhammad. T|Business Case  | 100%      | Low-Fidelity Prototyping |
+
+
+
+* [Meeting 4:](https://binaryqubit.github.io/Freight-Joint/githubPages/week4.html)
+    * **Time:** 09-29-2023
+    * **Agenda**: Prototyping Meeting
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | Low-Fidelity Prototyping  | 100%   | High-Fidelity Prototyping  |
+        | Amandip. P    |Low-Fidelity Prototyping   | 100%      | High-Fidelity Prototyping |
+        | Muhammad. T|Low-Fidelity Prototyping     | 100% |High-Fidelity Prototyping |
+
+* [Meeting 5:](https://binaryqubit.github.io/Freight-Joint/githubPages/week5.html)
+    * **Time:** 10-06-2023
+    * **Agenda**: High-Fidelity Prototyping Meeting
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | High-Fidelity Prototyping  | 100%   | Front-End Development |
+        | Amandip. P    |High-Fidelity Prototyping   | 100%      | Front-End Development |
+        | Muhammad. T|High-Fidelity Prototyping     | 100% |Front-End Development |
+
+
+* [Meeting 6:](https://binaryqubit.github.io/Freight-Joint/githubPages/week6.html)
+    * **Time:** 2023-10-21
+    * **Agenda**: Code Discussion and Review
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | Front-End Development  | 65%  | Front-End Development |
+        | Amandip. P    |Front-End Development  | 80%      | Back-End Development |
+        | Muhammad. T|Front-End Development    | 70% |Front-End Development & Kanban Initialization |
+
+* [Meeting 7:](https://binaryqubit.github.io/Freight-Joint/githubPages/week10.html)
+    * **Time:** 2023-11-19
+    * **Agenda**: Insight Meeting 
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | Front-End Development  | 65%  | Front-End Development |
+        | Amandip. P    |Front-End Development  | 80%      | Back-End Development |
+        | Muhammad. T|Front-End Development    | 70% |Front-End Development & Kanban Initialization |
+
+
+
+
+
 
 
 
