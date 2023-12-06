@@ -115,6 +115,18 @@ In the freight and logistics industry, shippers are entities that need to send g
         | Amandip. P    |Front-End Development  | 80%      | Back-End Development |
         | Muhammad. T|Front-End Development    | 70% |Front-End Development & Kanban Initialization |
 
+* [Meeting 8:](https://binaryqubit.github.io/Freight-Joint/githubPages/week11.html)
+    * **Time:** 2023-11-27
+    * **Agenda**: Last Meeting
+
+        | Team Member | Previous Task | Completion State  | Next Task|
+        |----------|----------|----------|----------|
+        | Ethan. G    | Front-End Development  |100%  | Front-End Development |
+        | Amandip. P    |Back-End Development  | 98%      | Back-End Development |
+        | Muhammad. T|Front-End Development & Kanban Initialization   | 100% |Front-End Development & Kanban Initialization |
+
+
+
 
 
 
