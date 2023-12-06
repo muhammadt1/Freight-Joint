@@ -128,10 +128,10 @@ In the freight and logistics industry, shippers are entities that need to send g
 ## 5) Project Management
 ![Project Management Image](Documents/g1.png)
 ![Project Management Image2](Documents/g2.png)
-![GanttPDF](https://github.com/BinaryQuBit/Documents/Week1/Online Gantt 20231127.pdf)
+[GanttPDF](https://binaryqubit.github.io/Freight-Joint/Documents/Week1/Online%20Gantt%2020231127.pdf)
 
 
-
+## 6) Conclusion and Future Work EG
 
 
 ## Getting Started
