@@ -5,7 +5,7 @@
 </div>
 <div align = "center">
 
-## Check out the whole process -> [here](https://binaryqubit.github.io/Freight-Joint/githubPages/index.html)
+## Check out the whole process -> [here](https://binaryqubit.github.io/Freight-Joint/githubPages/index.html)🚚
 
 </div>
 
