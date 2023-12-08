@@ -14,7 +14,7 @@
 - [Muhammad Tariq](https://github.com/muhammadt1)
 - [Ethan Goski](https://github.com/EthanGoski)
 
-
+## Process
 * [Documents](https://github.com/BinaryQuBit/Freight-Joint/tree/main/Documents)
 * [Full Process](https://binaryqubit.github.io/Freight-Joint/githubPages/index.html)
 * [Report](https://github.com/BinaryQuBit/Freight-Joint/blob/main/REPORT.MD)
