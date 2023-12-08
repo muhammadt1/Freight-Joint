@@ -21,7 +21,7 @@ In the freight and logistics industry, shippers are entities that need to send g
 ## 2) Design Problem
 
 **2.1)** Problem Definition
-In our fast-evolving modern world, built on numerous conveniences and luxuries, the backbone supporting this dynamic lifestyle is the diverse array of global transportation systems. This transportation varies from boats, trains, planes, and most importantly a variety of trucks. These trucks bring our food, packages, building supplies, cars, and much more. However, the trucking industry lacks a well built, biddingless system that connects shippers and carriers. This project aims to fix this issue by creating a website that connects shippers and carriers via a loadboard system that allows shippers to post loads without hagling with carriers about the fine details, and allows carriers to choose loads that fit their needs and trucks.
+In our fast-evolving modern world, built on numerous conveniences and luxuries, the backbone supporting this dynamic lifestyle is the diverse array of global transportation systems. This transportation varies from boats, trains, planes, and most importantly a variety of trucks. These trucks bring our food, packages, building supplies, cars, and much more. However, the trucking industry lacks a well built, biddingless system that connects shippers and carriers. This project aims to fix this issue by creating a website/application that connects shippers and carriers via a loadboard system that allows shippers to post loads without hagling with carriers about the fine details, and allows carriers to choose loads that fit their needs and trucks.
 
 **2.2)** Design Requirements:
 * **2.2.1)** Functions: 
