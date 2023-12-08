@@ -18,11 +18,12 @@
 
 In the freight and logistics industry, shippers are entities that need to send goods, and carriers are entities that own vehicles and transport goods. A load board is a marketplace where shippers post their loads, and carriers find and choose loads to transport.
 
-## 2) Design Problem -EG
+## 2) Design Problem
 
-**2.1)** 
+**2.1)** Problem Definition
+In our fast-evolving modern world, built on numerous conveniences and luxuries, the backbone supporting this dynamic lifestyle is the diverse array of global transportation systems. This transportation varies from boats, trains, planes, and most importantly a variety of trucks. These trucks bring our food, packages, building supplies, cars, and much more. However, the trucking industry lacks a well built, biddingless system that connects shippers and carriers. This project aims to fix this issue by creating a website that connects shippers and carriers via a loadboard system that allows shippers to post loads without hagling with carriers about the fine details, and allows carriers to choose loads that fit their needs and trucks.
 
-**2.2)** Design Requirments:
+**2.2)** Design Requirements:
 * **2.2.1)** Functions: 
     * Our team employed the MERN Stack for our project, which includes MongoDB, ExpressJS, ReactJS, and NodeJS.
     * Interface for Shippers
@@ -36,7 +37,14 @@ In the freight and logistics industry, shippers are entities that need to send g
     * **Reliability:**  Our application reliably delivers consistent performance, guaranteeing a stable and dependable user experience.
     * **Societal Impact:** Pioneers an innovative approach to enhance logistics services, impacting the industry positively.
 
-## 3) Solution-EG
+## 3) Solution
+* **3.1) First Solution: Our first solution was just a simple low fidelity prototype that laid out the general ideas for what we wanted. 
+*  **3.2)Second Solution: Our second solution was a high fidelity prototype built on Figma. This built a better base for what we wanted and had some visual features like navigation but nothing too advanced.
+*  **3.3)Final Solution: We chose this solution as it gave us the depth we wanted, had a strong base and showed all of the aspects that connected the shippers and carriers together.
+*  **3.31)Components: We have utilized several forms for Registration and Login, as well as using a loadboard component to create similar loadboards for both shippers and carriers.
+*  **3.32)Features: Our Solution contains pages for registration,login, loadboards for both shippers and carriers, and finally a manual based matching system that allows for shippers to post loads and carriers to pick up those loads.
+*  **3.33)Environmental, Societal, Safety, and Economic Considerations: Our Solution takes the environment into account by limiting the need for in person discussions and we envisioned a geolocation tracker to get the truckers on optimal paths to limit polution. Societal considerations were that the bidding culture that is currently in place for truckers and shippers is a toxic environment that has some corruption, however, our solution could remove this culture and replace it with one where respect and honesty are revered. Our solution would improve safety as it would limit potential conflicts due to disagreements as well as limiting potential dangerous situations by the implementation of geolocation tracking. Economically, our solution would even the playing field by making it so all shippers and carriers have the same ability to acquire loads and are not limited by the extent of their resources.
+*  **3.34)Limitations: The Limitations we faced were an inability to do any actual in-field testing, no geolocation tracker,a limited matching system, and a limited knowledge into the inner workings of the trucking industry.
 
 
 
@@ -131,8 +139,11 @@ In the freight and logistics industry, shippers are entities that need to send g
 [GanttPDF](https://binaryqubit.github.io/Freight-Joint/Documents/Week1/Online%20Gantt%2020231127.pdf)
 
 
-## 6) Conclusion and Future Work EG
+## 6) Conclusion and Future Work
+In the end we created a website that allowed shippers and truckers to sign up and login. Shippers can post their loads and see what they have posted. Truckers can match with their desired loads. So all in all, we created a proper loadboard for shippers and truckers, with some ability to match loads. 
+However, we were unable to do all of what we wanted as we could not implement a geolocation tracking system and should have had a more in depth matching system that allowed for slightly easier matching.
 
+   In the future we would improve on the solution by adding a rudimentary geolocation tracking system, make a easier matching system and implement features like having a baseline rate implemented for loads. These features would require some research and development but should remain within the limitations of the project and not go beyond the scope of the project.
 
 ## Getting Started
 
