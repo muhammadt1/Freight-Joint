@@ -123,9 +123,9 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
 
         | Team Member | Previous Task | Completion State  | Next Task|
         |----------|----------|----------|----------|
-        | Ethan. G    | Front-End Development  | 65%  | Front-End Development |
-        | Amandip. P    |Front-End Development  | 80%      | Back-End Development |
-        | Muhammad. T|Front-End Development    | 70% |Front-End Development & Kanban Initialization |
+        | Ethan. G    | Front-End Development  | 75%  | Front-End Development |
+        | Amandip. P    |Front-End Development  | 90%      | Back-End Development |
+        | Muhammad. T|Front-End Development    | 95% |Front-End Development & Kanban Initialization |
 
 * [Meeting 8:](https://binaryqubit.github.io/Freight-Joint/githubPages/week11.html)
     * **Time:** 2023-11-27
