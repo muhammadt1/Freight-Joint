@@ -18,9 +18,9 @@
 
 In the freight and logistics industry, shippers are entities that need to send goods, and carriers are entities that own vehicles and transport goods. A load board is a marketplace where shippers post their loads, and carriers find and choose loads to transport.
 
-## 2) Design Problem 
+## 2) Design Problem -EG
 
-**2.1)** In the freight and logistics industry, shippers are entities that need to send goods, and carriers are entities that own vehicles and transport goods. A load board is a marketplace where shippers post their loads, and carriers find and choose loads to transport.
+**2.1)** 
 
 **2.2)** Design Requirments:
 * **2.2.1)** Functions: 
