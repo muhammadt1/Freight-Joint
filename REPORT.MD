@@ -141,7 +141,7 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
 ![Project Management Image](Documents/g1.png)
 ![Project Management Image2](Documents/g2.png)
 [GanttPDF](https://binaryqubit.github.io/Freight-Joint/Documents/Week1/Online%20Gantt%2020231127.pdf)
-
+ 
 
 ## 6) Conclusion and Future Work
 In the end we created a website that allowed shippers and truckers to sign up and login. Shippers can post their loads and see what they have posted. Truckers can match with their desired loads. So all in all, we created a proper loadboard for shippers and truckers, with some ability to match loads. 
