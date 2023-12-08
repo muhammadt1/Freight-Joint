@@ -44,10 +44,10 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
 *  **3.31)** Components: We have utilized several forms for Registration and Login, as well as using a loadboard component to create similar loadboards for both shippers and carriers.
 *  **3.32)** Features: Our Solution contains pages for registration,login, loadboards for both shippers and carriers, and finally a manual based matching system that allows for shippers to post loads and carriers to pick up those loads.
 *  **3.33)** Environmental, Societal, Safety, and Economic Considerations:
-*  Our Solution takes the environment into account by limiting the need for in person discussions and we envisioned a geolocation tracker to get the truckers on optimal paths to limit polution.
-*   Societal considerations were that the bidding culture that is currently in place for truckers and shippers is a toxic environment that has some corruption, however, our solution could remove this culture and replace it with one where respect and honesty are revered.
-*   Our solution would improve safety as it would limit potential conflicts due to disagreements as well as limiting potential dangerous situations by the implementation of geolocation tracking.
-*   Economically, our solution would even the playing field by making it so all shippers and carriers have the same ability to acquire loads and are not limited by the extent of their resources.
+   *  Our Solution takes the environment into account by limiting the need for in person discussions and we envisioned a geolocation tracker to get the truckers on optimal paths to limit polution.
+   *   Societal considerations were that the bidding culture that is currently in place for truckers and shippers is a toxic environment that has some corruption, however, our solution could remove this culture and replace it with one where respect and honesty are revered.
+   *   Our solution would improve safety as it would limit potential conflicts due to disagreements as well as limiting potential dangerous situations by the implementation of geolocation tracking.
+   *   Economically, our solution would even the playing field by making it so all shippers and carriers have the same ability to acquire loads and are not limited by the extent of their resources.
 *  **3.34)** Limitations: The Limitations we faced were an inability to do any actual in-field testing, no geolocation tracker,a limited matching system, and a limited knowledge into the inner workings of the trucking industry.
 
 
