@@ -14,6 +14,27 @@
 - [Muhammad Tariq](https://github.com/muhammadt1)
 - [Ethan Goski](https://github.com/EthanGoski)
 
+# Table of Contents
+1) [**Introduction**](#1-introduction)
+2) [**Design Problem**](#2-design-problem)
+    2.1) Problem Definition
+    2.2) Design Requirements
+        2.2.1) Functions 
+        2.2.2) Objectives
+        2.2.3) Constraints
+3) [**Solution**](#3-solution)
+    * 3.1) First Solution
+    * 3.2) Second Solution
+    * 3.3) Final Solution
+        * 3.3.1) Components
+        * 3.3.2) Features 
+        * 3.3.3) Environmental, Societal, Safety, and Economic Considerations
+        * 3.3.4) Limitations
+4) [**Teamwork**](#4-teamwork)
+5) [Project Management](#5-project-management)
+6) [Conclusion and Future Work](#6-conclusion-and-future-work)
+7) [Setup](##-getting-started)
+
 ## 1) Introduction
 
 In the freight and logistics industry, shippers are entities that need to send goods, and carriers are entities that own vehicles and transport goods. A load board is a marketplace where shippers post their loads, and carriers find and choose loads to transport.
@@ -39,16 +60,16 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
 
 ## 3) Solution
 * **3.1)** **First Solution:** Our first solution was just a simple low fidelity prototype that laid out the general ideas for what we wanted. 
-*  **3.2)** **Second Solution:** Our second solution was a high fidelity prototype built on Figma. This built a better base for what we wanted and had some visual features like navigation but nothing too advanced.
-*  **3.3)** **Final Solution:** We chose this solution as it gave us the depth we wanted, had a strong base and showed all of the aspects that connected the shippers and carriers together.
-*  **3.3.1)** **Components:** We have utilized several forms for Registration and Login, as well as using a loadboard component to create similar loadboards for both shippers and carriers.
-*  **3.3.2)** **Features:** Our Solution contains pages for registration,login, loadboards for both shippers and carriers, and finally a manual based matching system that allows for shippers to post loads and carriers to pick up those loads.
-*  **3.3.3)** **Environmental, Societal, Safety, and Economic Considerations:**
-   *  Our Solution takes the environment into account by limiting the need for in person discussions and we envisioned a geolocation tracker to get the truckers on optimal paths to limit polution.
-   *   Societal considerations were that the bidding culture that is currently in place for truckers and shippers is a toxic environment that has some corruption, however, our solution could remove this culture and replace it with one where respect and honesty are revered.
-   *   Our solution would improve safety as it would limit potential conflicts due to disagreements as well as limiting potential dangerous situations by the implementation of geolocation tracking.
-   *   Economically, our solution would even the playing field by making it so all shippers and carriers have the same ability to acquire loads and are not limited by the extent of their resources.
-*  **3.3.4)** Limitations: The Limitations we faced were an inability to do any actual in-field testing, no geolocation tracker,a limited matching system, and a limited knowledge into the inner workings of the trucking industry.
+* **3.2)** **Second Solution:** Our second solution was a high fidelity prototype built on Figma. This built a better base for what we wanted and had some visual features like navigation but nothing too advanced.
+* **3.3)** **Final Solution:** We chose this solution as it gave us the depth we wanted, had a strong base and showed all of the aspects that connected the shippers and carriers together.
+    *   **3.3.1)** **Components:** We have utilized several forms for Registration and Login, as well as using a loadboard component to create similar loadboards for both shippers and carriers.
+    *   **3.3.2)** **Features:** Our Solution contains pages for registration,login, loadboards for both shippers and carriers, and finally a manual based matching system that allows for shippers to post loads and carriers to pick up those loads.
+    *   **3.3.3)** **Environmental, Societal, Safety, and Economic Considerations:**
+        *  Our Solution takes the environment into account by limiting the need for in person discussions and we envisioned a geolocation tracker to get the truckers on optimal paths to limit polution.
+        *   Societal considerations were that the bidding culture that is currently in place for truckers and shippers is a toxic environment that has some corruption, however, our solution could remove this culture and replace it with one where respect and honesty are revered.
+        *   Our solution would improve safety as it would limit potential conflicts due to disagreements as well as limiting potential dangerous situations by the implementation of geolocation tracking.
+        *   Economically, our solution would even the playing field by making it so all shippers and carriers have the same ability to acquire loads and are not limited by the extent of their resources.
+    *   **3.3.4)** **Limitations:** The Limitations we faced were an inability to do any actual in-field testing, no geolocation tracker,a limited matching system, and a limited knowledge into the inner workings of the trucking industry.
 
 
 
