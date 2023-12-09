@@ -10,9 +10,9 @@
 </div>
 
 ## Contributors
-- [Amandip Padda](https://github.com/BinaryQuBit)
-- [Muhammad Tariq](https://github.com/muhammadt1)
-- [Ethan Goski](https://github.com/EthanGoski)
+- [**Amandip Padda**](https://github.com/BinaryQuBit)
+- [**Muhammad Tari**q](https://github.com/muhammadt1)
+- [**Ethan Goski**](https://github.com/EthanGoski)
 
 ## Table of Contents
 1) [**Introduction**](#1-introduction)
