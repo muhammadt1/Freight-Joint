@@ -14,7 +14,7 @@
 - [Muhammad Tariq](https://github.com/muhammadt1)
 - [Ethan Goski](https://github.com/EthanGoski)
 
-# Table of Contents
+## Table of Contents
 1) [**Introduction**](#1-introduction)
 2) [**Design Problem**](#2-design-problem)
     * 2.1) Problem Definition
