@@ -17,11 +17,11 @@
 # Table of Contents
 1) [**Introduction**](#1-introduction)
 2) [**Design Problem**](#2-design-problem)
-    2.1) Problem Definition
-    2.2) Design Requirements
-        2.2.1) Functions 
-        2.2.2) Objectives
-        2.2.3) Constraints
+    * 2.1) Problem Definition
+    * 2.2) Design Requirements
+        * 2.2.1) Functions 
+        * 2.2.2) Objectives
+        * 2.2.3) Constraints
 3) [**Solution**](#3-solution)
     * 3.1) First Solution
     * 3.2) Second Solution
@@ -31,20 +31,20 @@
         * 3.3.3) Environmental, Societal, Safety, and Economic Considerations
         * 3.3.4) Limitations
 4) [**Teamwork**](#4-teamwork)
-5) [Project Management](#5-project-management)
-6) [Conclusion and Future Work](#6-conclusion-and-future-work)
-7) [Setup](##-getting-started)
+5) [**Project Management**](#5-project-management)
+6) [**Conclusion and Future Work**](#6-conclusion-and-future-work)
+7) [**Setup**](##-getting-started)
 
-## 1) Introduction
+## 1) **Introduction**
 
 In the freight and logistics industry, shippers are entities that need to send goods, and carriers are entities that own vehicles and transport goods. A load board is a marketplace where shippers post their loads, and carriers find and choose loads to transport.
 
-## 2) Design Problem
+## 2) **Design Problem**
 
-**2.1)** Problem Definition
+**2.1)** **Problem Definition:**
 In our fast-evolving modern world, built on numerous conveniences and luxuries, the backbone supporting this dynamic lifestyle is the diverse array of global transportation systems. This transportation varies from boats, trains, planes, and most importantly a variety of trucks. These trucks bring our food, packages, building supplies, cars, and much more. However, the trucking industry lacks a well built, biddingless system that connects shippers and carriers. This project aims to fix this issue by creating a website/application that connects shippers and carriers via a loadboard system that allows shippers to post loads without hagling with carriers about the fine details, and allows carriers to choose loads that fit their needs and trucks.
 
-**2.2)** Design Requirements:
+**2.2)** **Design Requirements:**
 * **2.2.1)** Functions: 
     * Our team employed the MERN Stack for our project, which includes MongoDB, ExpressJS, ReactJS, and NodeJS.
     * Interface for Shippers
@@ -58,7 +58,7 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
     * **Reliability:**  Our application reliably delivers consistent performance, guaranteeing a stable and dependable user experience.
     * **Societal Impact:** Pioneers an innovative approach to enhance logistics services, impacting the industry positively.
 
-## 3) Solution
+## 3) **Solution**
 * **3.1)** **First Solution:** Our first solution was just a simple low fidelity prototype that laid out the general ideas for what we wanted. 
 * **3.2)** **Second Solution:** Our second solution was a high fidelity prototype built on Figma. This built a better base for what we wanted and had some visual features like navigation but nothing too advanced.
 * **3.3)** **Final Solution:** We chose this solution as it gave us the depth we wanted, had a strong base and showed all of the aspects that connected the shippers and carriers together.
@@ -73,7 +73,7 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
 
 
 
-## 4) Teamwork
+## 4) **Teamwork**
 * [Meeting 1:](https://binaryqubit.github.io/Freight-Joint/githubPages/week1.html)
     * **Time:** 09-08-2023
     * **Agenda**: Ice Breaker
@@ -158,19 +158,19 @@ In our fast-evolving modern world, built on numerous conveniences and luxuries, 
         | Amandip. P  |Back-End Development  | 98%      | Finalize Documentation |
         | Muhammad. T|Front-End Development & Kanban Initialization   | 100% |Finalize Documentation|
 
-## 5) Project Management
+## 5) **Project Management**
 ![Project Management Image](Documents/g1.png)
 ![Project Management Image2](Documents/g2.png)
 [GanttPDF](https://binaryqubit.github.io/Freight-Joint/Documents/Week1/Online%20Gantt%2020231127.pdf)
  
 
-## 6) Conclusion and Future Work
+## 6) **Conclusion and Future Work**
 In the end we created a website that allowed shippers and truckers to sign up and login. Shippers can post their loads and see what they have posted. Truckers can match with their desired loads. So all in all, we created a proper loadboard for shippers and truckers, with some ability to match loads. 
 However, we were unable to do all of what we wanted as we could not implement a geolocation tracking system and should have had a more in depth matching system that allowed for slightly easier matching.
 
    In the future we would improve on the solution by adding a rudimentary geolocation tracking system, make a easier matching system and implement features like having a baseline rate implemented for loads. These features would require some research and development but should remain within the limitations of the project and not go beyond the scope of the project.
 
-## Getting Started
+## **Getting Started**
 
 ### Downloads:
 - [Visual Studio Code](https://code.visualstudio.com/download)
