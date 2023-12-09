@@ -33,7 +33,6 @@
 4) [**Teamwork**](#4-teamwork)
 5) [**Project Management**](#5-project-management)
 6) [**Conclusion and Future Work**](#6-conclusion-and-future-work)
-7) [**Setup**](##-getting-started)
 
 ## 1) **Introduction**
 
