@@ -9,6 +9,10 @@
 
 </div>
 
+# Project Overview
+Welcome to Freight Joint, the innovative loadboard app designed to bridge the gap between shippers and truckers, creating a seamless and efficient logistics experience. With our cutting-edge technology, we bring together shippers with freight to move and truckers with the capacity to move it, ensuring a perfect match every time!
+
+
 ## Contributors
 - [Amandip Padda](https://github.com/BinaryQuBit)
 - [Muhammad Tariq](https://github.com/muhammadt1)
